@@ -281,7 +281,7 @@ label-background = #FF0000
 
 [module/atlz]
 type = custom/script
-exec = /home/diego/.config/polybar/scripts/atlz.sh
+exec = $HOME/$USER/.config/polybar/scripts/atlz.sh
 label-padding = 4
 label-background = #1c1c1c
 format-prefix = 
@@ -290,7 +290,7 @@ format-prefix-background = #FF0000
 
 [module/cache]
 type = custom/script
-exec = /home/diego/.config/polybar/scripts/cache.sh
+exec = $HOME/$USER/.config/polybar/scripts/cache.sh
 label-padding = 4
 label-background = #1c1c1c
 format-prefix = 
@@ -299,7 +299,7 @@ format-prefix-foreground = #1c1c1c
 
 [module/installed]
 type = custom/script
-exec = /home/diego/.config/polybar/scripts/instaled.sh
+exec = $HOME/$USER/.config/polybar/scripts/instaled.sh
 label-padding = 4
 label-background = #FF0000
 format-prefix = 
