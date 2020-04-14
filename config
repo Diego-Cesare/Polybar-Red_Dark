@@ -251,13 +251,75 @@ font-3 = PowerlineSymbols:pixelsize=18;5
  ### Positions end order modules ###
 ;===================================;
 
-modules-left = mpd
+modules-left = menu 
 modules-center = 
 modules-right = cache installed atlz cpu mem
  
 ;===============;
  ### Modules ###
 ;===============;
+
+[module/menu]
+type = custom/menu
+
+expand-right = true
+
+;;=============================
+;;          MENUS
+;==============================
+menu-0-0 =  Web
+menu-0-0-background = 1c1c1c
+menu-0-0-padding = 2
+menu-0-0-exec = menu-open-1
+;;=============================
+menu-0-1 =  Settings
+menu-0-1-background = #1c1c1c
+menu-0-1-padding = 2
+menu-0-1-exec = menu-open-2
+;;=============================
+menu-0-2 =  Utilities
+menu-0-2-background = #1c1c1c
+menu-0-2-padding = 2
+menu-0-2-exec = menu-open-3
+;;=============================
+;;         SUB-MENUS
+;;=============================
+menu-1-0 =  Chromium
+menu-1-0-exec = chromium &
+menu-1-0-background = #1c1c1c
+menu-1-0-padding = 2
+;;menu-1-1 = Chromium
+;;menu-1-1-exec = chromium &
+;;=============================
+menu-2-0 =  Themes
+menu-2-0-exec = lxappearance &
+menu-2-0-background = #1c1c1c
+menu-2-0-padding = 2
+;;menu-2-1 = Scrot
+;;menu-2-1-exec = scrot &
+;;============================
+menu-3-0 =  Sublime
+menu-3-0-exec = subl
+menu-3-0-background = #1c1c1c
+menu-3-0-padding = 2
+menu-3-1 =  Terminal
+menu-3-1-exec = xfce4-terminal
+menu-3-1-background = #1c1c1c
+menu-3-1-padding = 2
+
+
+label-open = 
+label-open-foreground = #ffffff
+label-open-background = #1c1c1c
+label-open-padding = 2
+label-close = 
+label-close-foreground = #ff0000
+label-close-background = #1c1c1c
+label-close-padding = 2
+
+label-separator = |
+label-separator-foreground = #ff0000
+label-separator-background = #ff0000
 
 [module/mem]
 type = internal/memory
@@ -281,7 +343,7 @@ label-background = #FF0000
 
 [module/atlz]
 type = custom/script
-exec = $HOME/$USER/.config/polybar/scripts/atlz.sh
+exec = $HOME/.config/polybar/scripts/atlz.sh
 label-padding = 4
 label-background = #1c1c1c
 format-prefix = 
@@ -290,7 +352,7 @@ format-prefix-background = #FF0000
 
 [module/cache]
 type = custom/script
-exec = $HOME/$USER/.config/polybar/scripts/cache.sh
+exec = $HOME/.config/polybar/scripts/cache.sh
 label-padding = 4
 label-background = #1c1c1c
 format-prefix = 
@@ -299,7 +361,7 @@ format-prefix-foreground = #1c1c1c
 
 [module/installed]
 type = custom/script
-exec = $HOME/$USER/.config/polybar/scripts/instaled.sh
+exec = $HOME/.config/polybar/scripts/instaled.sh
 label-padding = 4
 label-background = #FF0000
 format-prefix = 
